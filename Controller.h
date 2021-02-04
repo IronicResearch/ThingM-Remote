@@ -5,13 +5,15 @@
 typedef enum {
 	INT,
 	DEC,
-	BIN
+	BIN,
+	CHR
 	} EntryType;
 	
 typedef union {
 	int		ival;
 	float	fval;
 	bool	bval;
+	char*	sval;
 	} EntryValue;
 	
 typedef enum {
@@ -22,7 +24,11 @@ typedef enum {
 	FRM,
 	CTR,
 	ALT,
-	SEQ
+	SEQ,
+	STP,
+	SKP,
+	AL2,
+	SIO,
 	} Function;
 	
 typedef struct {
@@ -40,6 +46,7 @@ typedef struct {
 	EntryType	type;
 	EntryValue	xval;
 	int			ival;
+	int			icnt;
 	bool		dp;
 	int			dpcnt;
 	NSTimer*	timer;
@@ -53,4 +60,8 @@ typedef struct {
 - (IBAction)doRunKey:(id)sender;
 - (IBAction)timerTick:(id)sender;
 - (void)display;	
+@end
+
+@interface Controller(NSApplicationNotifications)
+-(void)applicationDidFinishLaunching:(NSNotification*)notification;
 @end

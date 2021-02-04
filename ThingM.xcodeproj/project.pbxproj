@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04B2B0C015B232DC00FABB32 /* SerialPortIO.c in Sources */ = {isa = PBXBuildFile; fileRef = 04B2B0BF15B232DC00FABB32 /* SerialPortIO.c */; };
+		04B2B0CB15B2334600FABB32 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B2B0CA15B2334600FABB32 /* IOKit.framework */; };
 		04DA9B2B0B2D204800B4B6E2 /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DA9B2A0B2D204800B4B6E2 /* Controller.m */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -32,6 +34,9 @@
 /* End PBXBuildStyle section */
 
 /* Begin PBXFileReference section */
+		04B2B0BF15B232DC00FABB32 /* SerialPortIO.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = SerialPortIO.c; sourceTree = "<group>"; };
+		04B2B0C115B232EE00FABB32 /* SerialPortIO.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SerialPortIO.h; sourceTree = "<group>"; };
+		04B2B0CA15B2334600FABB32 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
 		04DA9B290B2D204800B4B6E2 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
 		04DA9B2A0B2D204800B4B6E2 /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -52,6 +57,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				04B2B0CB15B2334600FABB32 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +82,7 @@
 		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04B2B0CA15B2334600FABB32 /* IOKit.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
 				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
@@ -106,6 +113,8 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				04B2B0C115B232EE00FABB32 /* SerialPortIO.h */,
+				04B2B0BF15B232DC00FABB32 /* SerialPortIO.c */,
 				32CA4F630368D1EE00C91783 /* ThingM_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 				04DA9B290B2D204800B4B6E2 /* Controller.h */,
@@ -194,6 +203,7 @@
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				04DA9B2B0B2D204800B4B6E2 /* Controller.m in Sources */,
+				04B2B0C015B232DC00FABB32 /* SerialPortIO.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
