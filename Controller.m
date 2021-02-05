@@ -268,7 +268,7 @@ char	inbuf[256] = {0};
 	e = [NSString stringWithFormat:@"%s %6s", cmdTable[SYN].prompt, bSyncProj  ? "ON" : "OFF"];
 	switch (cmdTable[fnidx].type) {
 		case INT: f = [NSString stringWithFormat:@"%-29s %s %6d",    cmdTable[fnidx].hint, cmdTable[fnidx].prompt, ival]; break;
-		case DEC: f = [NSString stringWithFormat:@"%-29s %s %3d.2d", cmdTable[fnidx].hint, cmdTable[fnidx].prompt, ival / 100, ival % 100]; break;
+		case DEC: f = [NSString stringWithFormat:@"%-29s %s %3d.%2d",cmdTable[fnidx].hint, cmdTable[fnidx].prompt, ival / 100, ival % 100]; break;
 		case BIN: f = [NSString stringWithFormat:@"%-29s %s %6s",    cmdTable[fnidx].hint, cmdTable[fnidx].prompt, ival ? " ON" : "OFF"]; break;
 		case CHR: f = [NSString stringWithFormat:@"%-29s %s",		 cmdTable[fnidx].hint, (xval.sval) ? xval.sval : "" ]; break;
 		}
