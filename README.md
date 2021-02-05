@@ -5,9 +5,11 @@ Remote Control App for ThingM-II and ThingM-OP optical printer controllers via s
 This Mac OS X app mimics the keypad layout and LCD character display of the ThingM-II controller,
 though may also be used with the ThingM-OP controller without the extra function keys.
 
+![ThingM Controller Keypad](Controller.png)
+
 ThingM controllers with RS232 serial port enabled use a simple mapping of ASCII characters to controller keys.
 Any serial terminal app could remotely type commands corresponding to ThingM keypad keys.
-Nunber keys are mapped as "0" to "9", "-" for minus direction, and "." for decimal point.
+Number keys are mapped as "0" to "9", "-" for minus direction, and "." for decimal point.
 Function keys are mapped as "P" for the Program key, and "R" for the Run key.
 Data entry is completed by "Ctrl-M" Enter key, or escaped by backspace "Ctrl-H" Clear key.
 
