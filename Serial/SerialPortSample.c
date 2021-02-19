@@ -380,7 +380,7 @@ void CloseSerialPort(int fileDescriptor)
     close(fileDescriptor);
 }
 
-int submain(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     int			fileDescriptor;
     kern_return_t	kernResult; // on PowerPC this is an int (4 bytes)
