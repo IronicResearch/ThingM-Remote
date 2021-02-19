@@ -1,0 +1,395 @@
+#
+#	File:		BuildFile
+#
+#	Contains:	Build instructions for SimpleText
+#
+#	Version:	SimpleText 1.4 or later
+#
+#	Written by:	Dave Hersey
+#
+#	Copyright:	© 1995-1997 by Apple Computer, Inc., all rights reserved.
+#
+#	File Ownership:
+#
+#		DRI:				Tom Dowdy
+#
+#		Other Contact:		Jim Negrette
+#
+#		Technology:			Macintosh Graphics Group
+#
+#	Writers:
+#
+#		(BC)	Brian Chrisman
+#		(ted)	Tom Dowdy
+#		(TD)	Tom Dowdy
+#
+#	Change History (most recent first):
+#
+#		<16>	 4/18/97	ted		Make sure 68k version is correct
+#		<15>	 12/5/96	ted		[1609760]  Fixing export for link
+#		<14>	10/21/96	ted		[1391143]  adding multiple launch ability
+#		<13>	 10/9/96	ted		fixing target specification
+#		<12>	  9/6/96	ted		adding more weak entries
+#		<11>	  8/5/96	BC		adding UserRezOptions
+#		<10>	 6/12/96	ted		adding duplication of release notes
+#		 <9>	  6/4/96	ted		final PPC build file stuff
+#		 <8>	 5/31/96	ted		making FAT link
+#		 <7>	 5/31/96	ted		adding PPC, FAT, and NuKernel builds
+#		 <6>	 5/10/96	ted		moving to applications directory
+#		 <5>	 4/11/96	ted		adding SOM include
+#		 <4>	 2/15/96	ted		moving to new libraries
+#		 <3>	  2/8/96	ted		Updating to new build environment
+#		 <2>	 10/2/95	TD		adding support for SC compiler
+#		 <1>	 8/21/95	TD		First checked in.
+#		 <1>	  8/21/95	ted		First checked in.
+
+Set 68kUserCOptions1 "-d BUILDING_FOR_SYSTEM7=1 -d FOR_OPAQUE_SYSTEM_DATA_STRUCTURES=0"
+If "{68kToolset}" == "Symantec"
+	Set 68kUserCOptions1 "{68kUserCOptions1} -w 17"
+End
+Export 68kUserCOptions1
+
+Set PPCUserCOptions1 "-d BUILDING_FOR_SYSTEM7=1 -d FOR_OPAQUE_SYSTEM_DATA_STRUCTURES=0"
+Export PPCUserCOptions1
+
+Set UserRezOptions "-a -D SystemSevenOrLater=1"
+Export UserRezOptions
+
+##
+## Indicate the source files.
+##
+
+Set CSourceFiles '				¶
+			AboutBox.c			¶
+			Clipboard.c			¶
+			GXFile.c			¶
+			MovieFile.c			¶
+			PICTFile.c			¶
+			SimpleText.c		¶
+			TextDrag.c			¶
+			TextFile.c			¶
+			ThreeDMetafile.c	¶
+			'
+Set RSourceFiles 'SimpleText.r'
+
+Set ASourceFiles 'TextFile.a'
+
+export CSourceFiles RSourceFiles ASourceFiles
+
+
+##
+## Set up the object and target directories, etc.
+##
+
+set BaseVers 1.0
+set BaseYear 1989
+
+export BaseVers BaseYear
+
+
+# Weak exports we use (only way to prevent warnings from MakePEF, ick)
+
+Set WeakEntries		'														¶
+			-w QuickTimeLib:MCGetControllerBoundsRect						¶
+			-w QuickTimeLib:SetMovieGWorld									¶
+			-w QuickTimeLib:IsMovieDone										¶
+			-w QuickTimeLib:DisposeMovieController							¶
+			-w QuickTimeLib:SetMovieBox										¶
+			-w QuickTimeLib:AlignWindow										¶
+			-w QuickTimeLib:MCIsPlayerEvent									¶
+			-w QuickTimeLib:NewMovieFromFile								¶
+			-w QuickTimeLib:GetMovieBox										¶
+			-w QuickTimeLib:MCDoAction										¶
+			-w QuickTimeLib:DisposeMovie									¶
+			-w QuickTimeLib:DrawPictureFile									¶
+			-w QuickTimeLib:EnterMovies										¶
+			-w QuickTimeLib:CustomGetFilePreview							¶
+			-w QuickTimeLib:CloseMovieFile									¶
+			-w QuickTimeLib:ExitMovies										¶
+			-w QuickTimeLib:DragAlignedWindow								¶
+			-w QuickTimeLib:GetMoviesError									¶
+			-w QuickTimeLib:SetImageDescriptionExtension					¶
+			-w QuickTimeLib:DecompressImage									¶
+			-w QuickTimeLib:OpenMovieFile									¶
+			-w QuickTimeLib:NewMovieController								¶
+			-w QuickTimeLib:MovieSearchText									¶
+			-w QuickTimeLib:GetMovieIndTrackType							¶
+																			¶
+			-w ThreadsLib:DisposeThread										¶
+			-w ThreadsLib:YieldToThread										¶
+			-w ThreadsLib:SetThreadState									¶
+			-w ThreadsLib:NewThread											¶
+			-w ThreadsLib:YieldToAnyThread									¶
+																			¶
+			-w SpeechLib:SpeakText											¶
+			-w SpeechLib:DisposeSpeechChannel								¶
+			-w SpeechLib:GetVoiceDescription								¶
+			-w SpeechLib:GetIndVoice										¶
+			-w SpeechLib:StopSpeech											¶
+			-w SpeechLib:NewSpeechChannel									¶
+			-w SpeechLib:GetSpeechInfo										¶
+			-w SpeechLib:CountVoices										¶
+																			¶
+			-w DragLib:InstallReceiveHandler								¶
+			-w DragLib:RemoveTrackingHandler								¶
+			-w DragLib:DragPreScroll										¶
+			-w DragLib:GetDragMouse											¶
+			-w DragLib:SetDragSendProc										¶
+			-w DragLib:GetFlavorData										¶
+			-w DragLib:WaitMouseMoved										¶
+			-w DragLib:SetDragItemBounds									¶
+			-w DragLib:GetDragItemReferenceNumber							¶
+			-w DragLib:SetDragItemFlavorData								¶
+			-w DragLib:TEGetHiliteRgn										¶
+			-w DragLib:GetDropLocation										¶
+			-w DragLib:GetFlavorDataSize									¶
+			-w DragLib:TrackDrag											¶
+			-w DragLib:AddDragItemFlavor									¶
+			-w DragLib:ShowDragHilite										¶
+			-w DragLib:CountDragItems										¶
+			-w DragLib:DragPostScroll										¶
+			-w DragLib:NewDrag												¶
+			-w DragLib:GetDragModifiers										¶
+			-w DragLib:GetFlavorFlags										¶
+			-w DragLib:HideDragHilite										¶
+			-w DragLib:DisposeDrag											¶
+			-w DragLib:RemoveReceiveHandler									¶
+			-w DragLib:InstallTrackingHandler								¶
+			-w DragLib:GetDragAttributes									¶
+																			¶
+			-w QuickDrawGXLib:GXGetDefaultFont								¶
+			-w QuickDrawGXLib:GXFindFonts									¶
+			-w QuickDrawGXLib:GXFindFontName								¶
+			-w QuickDrawGXLib:GXGetGraphicsClient							¶
+			-w QuickDrawGXLib:GXSetGraphicsClient							¶
+			-w QuickDrawGXLib:GXEnterGraphics								¶
+			-w QuickDrawGXLib:GXExitGraphics								¶
+			-w QuickDrawGXLib:GXGetGraphicsError							¶
+			-w QuickDrawGXLib:GXIgnoreGraphicsWarning						¶
+			-w QuickDrawGXLib:GXPopGraphicsWarning							¶
+			-w QuickDrawGXLib:GXNewBitmap									¶
+			-w QuickDrawGXLib:GXNewRectangle								¶
+			-w QuickDrawGXLib:GXGetGlyphs									¶
+			-w QuickDrawGXLib:GXGetPicture									¶
+			-w QuickDrawGXLib:GXGetText										¶
+			-w QuickDrawGXLib:GXNewInk										¶
+			-w QuickDrawGXLib:GXNewShape									¶
+			-w QuickDrawGXLib:GXNewStyle									¶
+			-w QuickDrawGXLib:GXNewViewDevice								¶
+			-w QuickDrawGXLib:GXNewViewGroup								¶
+			-w QuickDrawGXLib:GXNewViewPort									¶
+			-w QuickDrawGXLib:GXDisposeInk									¶
+			-w QuickDrawGXLib:GXDisposeShape								¶
+			-w QuickDrawGXLib:GXDisposeStyle								¶
+			-w QuickDrawGXLib:GXDisposeTransform							¶
+			-w QuickDrawGXLib:GXDisposeViewGroup							¶
+			-w QuickDrawGXLib:GXDisposeViewPort								¶
+			-w QuickDrawGXLib:GXCloneShape									¶
+			-w QuickDrawGXLib:GXCloneTransform								¶
+			-w QuickDrawGXLib:GXDrawShape									¶
+			-w QuickDrawGXLib:GXGetTag										¶
+			-w QuickDrawGXLib:GXGetShapeBounds								¶
+			-w QuickDrawGXLib:GXGetShapeTransform							¶
+			-w QuickDrawGXLib:GXGetShapeType								¶
+			-w QuickDrawGXLib:GXSetShapeFill								¶
+			-w QuickDrawGXLib:GXSetShapeInk									¶
+			-w QuickDrawGXLib:GXSetShapeStyle								¶
+			-w QuickDrawGXLib:GXSetShapeTransform							¶
+			-w QuickDrawGXLib:GXSetShapeType								¶
+			-w QuickDrawGXLib:GXGetShapePen									¶
+			-w QuickDrawGXLib:GXGetStyleFont								¶
+			-w QuickDrawGXLib:GXGetStylePen									¶
+			-w QuickDrawGXLib:GXGetStyleEncoding							¶
+			-w QuickDrawGXLib:GXSetShapePen									¶
+			-w QuickDrawGXLib:GXSetStylePen									¶
+			-w QuickDrawGXLib:GXSetShapeColor								¶
+			-w QuickDrawGXLib:GXSetInkColor									¶
+			-w QuickDrawGXLib:GXSetInkTransfer								¶
+			-w QuickDrawGXLib:GXGetShapeClip								¶
+			-w QuickDrawGXLib:GXGetShapeMapping								¶
+			-w QuickDrawGXLib:GXGetTransformMapping							¶
+			-w QuickDrawGXLib:GXSetShapeClip								¶
+			-w QuickDrawGXLib:GXSetShapeMapping								¶
+			-w QuickDrawGXLib:GXSetShapeViewPorts							¶
+			-w QuickDrawGXLib:GXSetTransformViewPorts						¶
+			-w QuickDrawGXLib:GXGetViewPortMapping							¶
+			-w QuickDrawGXLib:GXSetViewPortClip								¶
+			-w QuickDrawGXLib:GXSetViewPortDither							¶
+			-w QuickDrawGXLib:GXSetViewPortMapping							¶
+			-w QuickDrawGXLib:GXSetViewPortParent							¶
+			-w QuickDrawGXLib:GXGetShapeTags								¶
+			-w QuickDrawGXLib:GXGetShapeAttributes							¶
+			-w QuickDrawGXLib:GXSetShapeAttributes							¶
+			-w QuickDrawGXLib:GXSetViewPortAttributes						¶
+			-w QuickDrawGXLib:GXGetShapeLocalBounds							¶
+			-w QuickDrawGXLib:GXGetPictureParts								¶
+			-w QuickDrawGXLib:GXSetPictureParts								¶
+			-w QuickDrawGXLib:GXSetPolygonParts								¶
+			-w QuickDrawGXLib:GXDifferenceShape								¶
+			-w QuickDrawGXLib:GXMapShape									¶
+			-w QuickDrawGXLib:GXMoveShape									¶
+			-w QuickDrawGXLib:GXScaleShape									¶
+			-w QuickDrawGXLib:GXInsetShape									¶
+			-w QuickDrawGXLib:GXFlattenShape								¶
+			-w QuickDrawGXLib:GXUnflattenShape								¶
+			-w QuickDrawGXLib:GXNewWindowViewPort							¶
+			-w QuickDrawGXLib:GXInstallQDTranslator							¶
+			-w QuickDrawGXLib:GXRemoveQDTranslator							¶
+			-w QuickDrawGXLib:GXConvertQDFont								¶
+			-w QuickDrawGXLib:GXGetLayout									¶
+			-w QuickDrawGXLib:GXSetLayout									¶
+			-w QuickDrawGXLib:GXGetLayoutHighlight							¶
+			-w QuickDrawGXLib:GXSetStyleRunControls							¶
+			-w QuickDrawGXLib:GXSetStyleRunFeatures							¶
+			-w QuickDrawGXLib:GXGetStyleRunControls							¶
+			-w QuickDrawGXLib:InvertMapping									¶
+			-w QuickDrawGXLib:MapMapping									¶
+			-w QuickDrawGXLib:MoveMapping									¶
+			-w QuickDrawGXLib:ScaleMapping									¶
+			-w QuickDrawGXLib:ResetMapping									¶
+			-w QuickDrawGXLib:FixedDivide									¶
+			-w QuickDrawGXLib:FixedMultiply									¶
+			-w QuickDrawGXLib:AddCollectionItem								¶
+			-w QuickDrawGXLib:GetCollectionItem								¶
+			-w QuickDrawGXLib:GXInitPrinting								¶
+			-w QuickDrawGXLib:GXExitPrinting								¶
+			-w QuickDrawGXLib:GXNewJob										¶
+			-w QuickDrawGXLib:GXDisposeJob									¶
+			-w QuickDrawGXLib:GXInstallApplicationOverride					¶
+			-w QuickDrawGXLib:GXDisposeFormat								¶
+			-w QuickDrawGXLib:GXGetJobError									¶
+			-w QuickDrawGXLib:GXJobDefaultFormatDialog						¶
+			-w QuickDrawGXLib:GXJobPrintDialog								¶
+			-w QuickDrawGXLib:GXGetJobFormat								¶
+			-w QuickDrawGXLib:GXGetFormatDimensions							¶
+			-w QuickDrawGXLib:GXGetJobPageRange								¶
+			-w QuickDrawGXLib:GXStartJob									¶
+			-w QuickDrawGXLib:GXPrintPage									¶
+			-w QuickDrawGXLib:GXFinishJob									¶
+			-w QuickDrawGXLib:GXGetJobCollection							¶
+			-w QuickDrawGXLib:GXGetJobRefCon								¶
+			-w QuickDrawGXLib:GXSetJobRefCon								¶
+			-w QuickDrawGXLib:GXSelectJobOutputPrinter						¶
+			-w QuickDrawGXLib:GXUpdateJob									¶
+			-w QuickDrawGXLib:GXGetJobPrinter								¶
+			-w QuickDrawGXLib:GXGetPrinterDriverType						¶
+			-w QuickDrawGXLib:GXOpenPrintFile								¶
+			-w QuickDrawGXLib:GXClosePrintFile								¶
+			-w QuickDrawGXLib:GXCountPrintFilePages							¶
+			-w QuickDrawGXLib:GXReadPrintFilePage							¶
+			-w QuickDrawGXLib:GXSavePrintFile								¶
+			-w QuickDrawGXLib:GXIdleJob										¶
+			-w QuickDrawGXLib:GXGetJob										¶
+			-w QuickDrawGXLib:Forward_GXPrintingEvent						¶
+			-w QuickDrawGXLib:Send_GXSpoolResource							¶
+			-w QuickDrawGXLib:Forward_GXCompleteSpoolFile					¶
+					'
+Export WeakEntries
+
+
+# Set up options for each specific toolset
+
+if {UseMakeMake} || !"`Exists "{NRMakeDir}SimpleText.make"`"
+	{NRMakemake}																		¶
+		{GlobalMakeMakeOptions}															¶
+		MAKEFILE="{NRMakeDir}"SimpleText.make											¶
+		-objdir '{NRObjectDir}'															¶
+		-srcdirs "'{NRObjectDir}' ':'"													¶
+																						¶
+		-masterinterfaces '{MasterPublicInterfaces}' '{PublicCInterfaces}'				¶
+		-ic '{PublicCInterfaces}' 														¶
+		-ic '{MasterStdCInterfaces}' 													¶
+		-ic '{MasterModernInterfaces}' 													¶
+		-ic '{MasterSOMInterfaces}' 													¶
+		-ir '{MasterRInterfaces}' 														¶
+																						¶
+		# 68k rules																		¶
+																						¶
+		-t68k '{TargSys7ApplicationsDir}'SimpleText.68k									¶
+			-l '-t APPL -c ttxt'														¶
+			{CSourceFiles}																¶
+			{ASourceFiles}																¶
+			{RSourceFiles}																¶
+			AGFileLib.o																	¶
+			"{NR_SCM_MPW_Classic68k}Interface.o"										¶
+			"{NR_SCM_MPW_Classic68k}MacRuntime.o"										¶
+			"{NR_SCM_MPW_Classic68k}StdCLib.o"											¶
+																						¶
+		-t SimpleText68k																¶
+			-customonly 'SetFile "{TargSys7ApplicationsDir}"SimpleText.68k -a MBi -t APPL -c ttxt'¶
+			'{TargSys7ApplicationsDir}'SimpleText.68k									¶
+																						¶
+		# PPC rules																		¶
+																						¶
+		-tppc '{NRObjectDir}'SimpleText.xcoff											¶
+			-l '-export main'															¶
+			{CSourceFiles}																¶
+			{RSourceFiles}																¶
+			"AGFileLib.xcoff"															¶
+			"AppleGuideGlue.xcoff"														¶
+			"{NR_SCM_MPW_Shared}InterfaceLib"											¶
+			"{NR_SCM_MPW_Shared}StdCLib"												¶
+			"{NR_SCM_MPW_Shared}QuickTimeLib"											¶
+			"{NR_SCM_MPW_Shared}ThreadsLib"												¶
+			"{NR_SCM_MPW_Shared}SpeechLib"												¶
+			"{NR_SCM_MPW_Shared}DragLib"												¶
+			"{NR_SCM_MPW_PPC}PPCCRuntime.o"												¶
+			"{NR_SCM_MPW_PPC}StdCRuntime.o"												¶
+			"{NR_SCM_MPW_PPC}QuickDrawGXLib.xcoff"										¶
+																						¶
+		-t '{TargSys7ApplicationsDir}'SimpleText.PPC									¶
+			-customonly 																¶
+				 '{PefConverter} "{NRObjectDir}SimpleText.xcoff" 						¶
+				 	-l QuickDrawGXLib.xcoff=QuickDrawGXLib~ 							¶
+					-l QuickTimeLib~													¶
+					-l DragLib~															¶
+					-l ThreadsLib~														¶
+					-l SpeechLib~														¶
+					{WeakEntries} -o {Targ}; 											¶
+				 MergeFragment -a -c -x -n "SimpleText" {Targ};							¶
+				 SetFile {Targ} -a MBi -t APPL -c ttxt'									¶
+			'{NRObjectDir}'SimpleText.xcoff												¶
+																						¶
+		-t '{TargSys7ApplicationsDir}'SimpleText.PPC									¶
+			{RSourceFiles}																¶
+																						¶
+		-t SimpleTextPPC																¶
+			-customonly ""																¶
+			'{TargSys7ApplicationsDir}'SimpleText.PPC									¶
+																						¶
+		# FAT rules																		¶
+																						¶
+		-t '{TargSys7ApplicationsDir}'SimpleText										¶
+			-customonly 																¶
+				'Duplicate -y "{TargSys7ApplicationsDir}"SimpleText.PPC {Targ};			¶
+				Echo "include ¶"{TargSys7ApplicationsDir}SimpleText.68k¶" '¶''CODE'¶'';¶n" | Rez -a -o {Targ};¶
+				SetFile {Targ} -a MBi -t APPL -c ttxt;									¶
+				Duplicate -y ChangeLog "{TargReleaseNotesDir}SimpleText Release Notes"	¶
+				'																		¶
+			'{TargSys7ApplicationsDir}'SimpleText.68k									¶
+			'{TargSys7ApplicationsDir}'SimpleText.PPC									¶
+																						¶
+		-t SimpleTextFAT																¶
+			-customonly ""																¶
+			'{TargSys7ApplicationsDir}'SimpleText										¶
+																						¶
+		# NuKernel rules																¶
+																						¶
+		-t '{TargApplicationsDir}'SimpleText											¶
+			-customonly 																¶
+				'Duplicate -y "{TargSys7ApplicationsDir}"SimpleText.PPC {Targ};			¶
+				Echo "include ¶"{TargSys7ApplicationsDir}SimpleText.68k¶" '¶''CODE'¶'';¶n" | Rez -a -o {Targ};¶
+				SetFile {Targ} -a MBi -t APPL -c ttxt;									¶
+				Duplicate -y ChangeLog "{TargReleaseNotesDir}SimpleText Release Notes"	¶
+				'																		¶
+			'{TargSys7ApplicationsDir}'SimpleText.68k									¶
+			'{TargSys7ApplicationsDir}'SimpleText.PPC									¶
+																						¶
+		-t SimpleTextNuKernel															¶
+			-customonly ""																¶
+			'{TargApplicationsDir}'SimpleText											¶
+																						¶
+
+End
+
+{NRMake} {MakeOptions} -f "{NRMakeDir}"SimpleText.make {NRBuildTarget} {MakeDefines} 
