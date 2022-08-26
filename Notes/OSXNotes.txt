@@ -1,0 +1,27 @@
+Notes on Mac OS X Serial Console Applications
+
+In order to use ThingM with the remote serial interface on Mac OS X, you must open a Unix Terminal shell window to run the following console-style applications. (Attempting to run any classic Mac serial applications in the OS X Classic environment will not work, because the device interface services supporting the original Mac serial ports are not available.)
+
+Using the Finder, open the Applications folder, then the Utilities folder, then launch the Terminal application. While in the Terminal window, you will be running programs using Unix shell commands. Case is significant, so be careful to type the following commands exactly as specified.
+
+Assuming that you unstuffed the MacSeq StuffIt archive on the desktop, you would  go into the MacSeq folders by typing the following on the command line:
+
+cd Desktop
+cd "MacSeq Folder"
+cd MacOSX
+  
+If you dragged the "MacOSX" subfolder into your Home directory, and renamed it something like "ThingM" you would only need to type:
+
+cd ThingM
+
+To run the serial terminal test type:
+
+./SerialTerm
+
+This program will attempt to identify all serial port devices currently active on the system (excluding modems), and attempt to initialize the last one found for ThingM communications. If ThingM is detected, a console dialog will begin by typing ThingM keypad commands, such as "P1", "P2", "P3", etc, or "A", "B", "C", etc, if using the ThingM-II. Pressing the Return key should get a response if the keypad command is valid, or "OK" plus the current frame counter value otherwise. Pressing the Escape key will quit. 
+
+To run the serial script reader type:
+
+./SerialScript test.seq
+
+This program will attempt to detect ThingM on the last serial port in the same manner as the SerialTerm test. Once detected, it will run a script file containing ThingM commands which was created by any text editor and saved in plain text format. If the script file name was omitted from the command line, the program will prompt for one. The program will attempt to recognize all applicable ThingM commmand functions by their 3-letter acronyms (such as "FRM"), and run them in sequence until the end of the script.

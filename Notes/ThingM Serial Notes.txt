@@ -1,0 +1,41 @@
+Notes on ThingM Serial Interface Control
+
+Serial Interface Connections for ThingM
+---------------------------------------
+ThingM stop-motion controls may be configured with an optional serial interface for remote operation by computer. The serial interface is a standard RS232 type compatible with PCs and Macs. Since the ThingM control unit uses industrial type AMP circular connectors, an adapter cable is provided for connecting ThingM as a conventional RS232 device with a D25 connector. Note that other adapters may be necessary for mating with the D25 connector, such as D9 connector used on some PCs or mini-DIN8 connectors used on Macs. These adapters are typically available as accessories for external modems.  
+
+Remote Serial Interface Commands for ThingM
+-------------------------------------------
+ThingM control units which include the serial interface option may be remotely controlled with ASCII character commands that correspond to the keypad. The ASCII characters "0" through "9" correspond directly to the ThingM number keys, as do the "-" (minus) and "." (decimal point) characters. The ThingM ENTER key is the ASCII Carriage Return code (CTRL+M) and the CLEAR key is the ASCII Backspace Delete code (CTRL+H). The PGM/MENU key is simply "P" and the RUN/STOP key is "R". Note that since there is exactly a 1-to-1 mapping between keys and characters, upper case characters are significant.
+
+Therefore any serial terminal program which allows you type commands in a console window and send them to a remote serial device will be able to remotely operate the ThingM keypad. For example, if the FRM Frame Count setting were mapped to the ThingM "1" key, the FRM command string would be typed "P" "1". (If that setting were also active as a hot key, then you could also just type "1".) The value for the frame count setting is simply the series of numerals that represent the number, followed the the Return key. For the example of setting the frame count to 24, the following characters are typed: "P", "1", "2", "4", "[Return]".
+
+The ThingM-II control added a set of 8 dedicated function keys separate from the number keypad. These keys are mapped by the ASCII characters "A" through "H". For example, the ThingM-II FRM Frame Count function which is typically located as the lower left function key is mapped to the character "E". So the above example on a ThingM-II could be alternately typed: "E", "2", "4", "[Return]". 
+
+Serial Terminal Applications
+----------------------------
+One or more test applications are available for communication with ThingM as a remote serial terminal. Any serial terminal program which works with external modems should suffice as well. This may be useful just for making sure that serial interface communications are correctly established between the computer and ThingM. 
+
+TestTerm for MS-DOS (not Windows DOS box)
+TestModem for Mac OS (9 or earlier, not OS X Classic)
+SerialTerm for Mac OS X
+
+All of these ThingM test apps look for a ThingM control connected on the designated serial port and run a terminal console dialog with ThingM if found. When working properly, any characters typed at the console window should update the corresponding ThingM functions as if the ThingM keys were pressed themselves. If full duplex operation is active, pressing ThingM keys should also echo ThingM settings at the remote console window.
+
+Remote Serial Script Applications
+---------------------------------
+One or more remote serial script applications are available for batching up commands to ThingM. These apps are more sophisticated than the serial terminal test apps as ThingM script commands are translated to ThingM function settings using 3-letter acronyms instead of ASCII character code strings. Any text editor or word processor program which works with plain text format files can be used for creating scripts as well.
+
+TVSeq for MS-DOS (not Windows DOS box)
+TestSeq for MS-DOS console only
+WinSeq for Windows
+MacSeq for Mac OS (9 or earlier, not OS X Classic)
+SerialScript for Mac OS X console only
+
+Typical scripts are intended for running repetitive ThingM operations with Camera and Projector in Sequencer mode. Refer to the instruction notes and sample scripts included with these apps for more specific information.
+
+Contact Info
+------------
+Ironic Research Labs
+www.ironicresearch.com
+info@ironicresearch.com

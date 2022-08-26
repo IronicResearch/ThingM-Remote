@@ -1,0 +1,544 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 38;
+	objects = {
+		F5C9135804C8CC3B01A80165 = {
+			children = (
+				F5C9136D04C8CC3B01A80165,
+				F5C9137104C8CC3B01A80165,
+				F5C9137504C8CC3B01A80165,
+				F5C9137804C8CC3B01A80165,
+				F5DE9D5F04C9D3A401A80165,
+				F5C9136304C8CC3B01A80165,
+			);
+			isa = PBXGroup;
+			refType = 4;
+		};
+		F5C9135A04C8CC3B01A80165 = {
+			buildRules = (
+			);
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Development;
+		};
+		F5C9135B04C8CC3B01A80165 = {
+			buildRules = (
+			);
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			isa = PBXBuildStyle;
+			name = Deployment;
+		};
+		F5C9135C04C8CC3B01A80165 = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXHeadersBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C9135D04C8CC3B01A80165 = {
+			buildActionMask = 2147483647;
+			files = (
+				F5E0E03D04C9FED601A80165,
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C9135E04C8CC3B01A80165 = {
+			buildActionMask = 2147483647;
+			files = (
+				F5C9137B04C8CC3B01A80165,
+				F5C9137C04C8CC3B01A80165,
+				F5C9137E04C8CC3B01A80165,
+				F5CF20BC0699FC4401733BE5,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C9135F04C8CC3B01A80165 = {
+			buildActionMask = 2147483647;
+			files = (
+				F5DE9D1E04C9D2F901A80165,
+				F5DE9D4304C9D35301A80165,
+				F5DE9D9704C9D48F01A80165,
+				F5CF23DF069A004001733BE5,
+				F5CF267D069A006301733BE5,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C9136004C8CC3B01A80165 = {
+			buildActionMask = 2147483647;
+			files = (
+				F5C9138004C8CC3B01A80165,
+			);
+			isa = PBXRezBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C9136104C8CC3B01A80165 = {
+			buildPhases = (
+				F5C9135C04C8CC3B01A80165,
+				F5C9135D04C8CC3B01A80165,
+				F5C9135E04C8CC3B01A80165,
+				F5C9135F04C8CC3B01A80165,
+				F5C9136004C8CC3B01A80165,
+			);
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = /usr/lib/gcc/darwin/3.1;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "QTSeq Carbon Debug";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			isa = PBXApplicationTarget;
+			name = "QTSeq Carbon Debug";
+			productName = "QTSeq Carbon Debug";
+			productReference = F5C9136204C8CC3B01A80165;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>QTSeq Carbon Debug</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Copyright 2003 Ironic Research Labs\\nBased on Apple QuickTime SDK</string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string></string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>QTSeq</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>10.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>0.0.1d1</string>
+</dict>
+</plist>
+";
+			shouldUseHeadermap = 0;
+		};
+		F5C9136204C8CC3B01A80165 = {
+			isa = PBXApplicationReference;
+			path = "QTSeq Carbon Debug.app";
+			refType = 3;
+		};
+		F5C9136304C8CC3B01A80165 = {
+			children = (
+				F5C9136204C8CC3B01A80165,
+				F5C9136B04C8CC3B01A80165,
+			);
+			isa = PBXGroup;
+			name = Products;
+			refType = 4;
+		};
+		F5C9136504C8CC3B01A80165 = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXHeadersBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C9136604C8CC3B01A80165 = {
+			buildActionMask = 2147483647;
+			files = (
+				F5E0E03E04C9FF6701A80165,
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C9136704C8CC3B01A80165 = {
+			buildActionMask = 2147483647;
+			files = (
+				F5C9138304C8CC3B01A80165,
+				F5C9138404C8CC3B01A80165,
+				F5C9138604C8CC3B01A80165,
+				F5CF20BD0699FC4401733BE5,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C9136804C8CC3B01A80165 = {
+			buildActionMask = 2147483647;
+			files = (
+				F5DE9D1F04C9D2F901A80165,
+				F5DE9D4404C9D35301A80165,
+				F5E0DF6604C9E7A901A80165,
+				F5CF23E0069A004001733BE5,
+				F5CF267E069A006301733BE5,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C9136904C8CC3B01A80165 = {
+			buildActionMask = 2147483647;
+			files = (
+				F5C9138804C8CC3B01A80165,
+			);
+			isa = PBXRezBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C9136A04C8CC3B01A80165 = {
+			buildPhases = (
+				F5C9136504C8CC3B01A80165,
+				F5C9136604C8CC3B01A80165,
+				F5C9136704C8CC3B01A80165,
+				F5C9136804C8CC3B01A80165,
+				F5C9136904C8CC3B01A80165,
+			);
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = /usr/lib/gcc/darwin/3.1;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "QTSeq Carbon Final";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			isa = PBXApplicationTarget;
+			name = "QTSeq Carbon Final";
+			productInstallPath = "$(USER_APPS_DIR)";
+			productName = "QTSeq Carbon Final";
+			productReference = F5C9136B04C8CC3B01A80165;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>QTSeq Carbon Final</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Copyright 2003 Ironic Research Labs\\nBased on Apple QuickTime SDK</string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleIdentifier</key>
+	<string></string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>QTSeq</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>10.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>0.0.1d1</string>
+</dict>
+</plist>
+";
+			shouldUseHeadermap = 0;
+		};
+		F5C9136B04C8CC3B01A80165 = {
+			isa = PBXApplicationReference;
+			path = "QTSeq Carbon Final.app";
+			refType = 3;
+		};
+		F5C9136D04C8CC3B01A80165 = {
+			children = (
+				F5C9136E04C8CC3B01A80165,
+				F5C9136F04C8CC3B01A80165,
+				F5C9137004C8CC3B01A80165,
+				F5CF20BB0699FC4401733BE5,
+			);
+			isa = PBXGroup;
+			name = Sources;
+			refType = 4;
+		};
+		F5C9136E04C8CC3B01A80165 = {
+			isa = PBXFileReference;
+			name = main.c;
+			path = Mac/main.c;
+			refType = 4;
+		};
+		F5C9136F04C8CC3B01A80165 = {
+			isa = PBXFileReference;
+			name = Common.c;
+			path = Common/Common.c;
+			refType = 4;
+		};
+		F5C9137004C8CC3B01A80165 = {
+			isa = PBXFileReference;
+			name = Globals.c;
+			path = Common/Globals.c;
+			refType = 4;
+		};
+		F5C9137104C8CC3B01A80165 = {
+			children = (
+				F5C9137204C8CC3B01A80165,
+				F5C9137304C8CC3B01A80165,
+				F5C9137404C8CC3B01A80165,
+				F5DE9E1E04C9DAF001A80165,
+			);
+			isa = PBXGroup;
+			name = Resources;
+			refType = 4;
+		};
+		F5C9137204C8CC3B01A80165 = {
+			isa = PBXFileReference;
+			name = QTSeq.r;
+			path = Mac/QTSeq.r;
+			refType = 4;
+		};
+		F5C9137304C8CC3B01A80165 = {
+			isa = PBXFileReference;
+			name = carb.r;
+			path = Mac/carb.r;
+			refType = 4;
+		};
+		F5C9137404C8CC3B01A80165 = {
+			isa = PBXFileReference;
+			name = plst.r;
+			path = Mac/plst.r;
+			refType = 4;
+		};
+		F5C9137504C8CC3B01A80165 = {
+			children = (
+			);
+			isa = PBXGroup;
+			name = "ANSI Libraries";
+			refType = 4;
+		};
+		F5C9137804C8CC3B01A80165 = {
+			children = (
+			);
+			isa = PBXGroup;
+			name = "Mac Libraries";
+			refType = 4;
+		};
+		F5C9137B04C8CC3B01A80165 = {
+			fileRef = F5C9136F04C8CC3B01A80165;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5C9137C04C8CC3B01A80165 = {
+			fileRef = F5C9137004C8CC3B01A80165;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5C9137E04C8CC3B01A80165 = {
+			fileRef = F5C9136E04C8CC3B01A80165;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5C9138004C8CC3B01A80165 = {
+			fileRef = F5C9137204C8CC3B01A80165;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5C9138304C8CC3B01A80165 = {
+			fileRef = F5C9136F04C8CC3B01A80165;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5C9138404C8CC3B01A80165 = {
+			fileRef = F5C9137004C8CC3B01A80165;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5C9138604C8CC3B01A80165 = {
+			fileRef = F5C9136E04C8CC3B01A80165;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5C9138804C8CC3B01A80165 = {
+			fileRef = F5C9137204C8CC3B01A80165;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5C9138904C8CC3B01A80165 = {
+			buildStyles = (
+				F5C9135A04C8CC3B01A80165,
+				F5C9135B04C8CC3B01A80165,
+			);
+			isa = PBXProject;
+			mainGroup = F5C9135804C8CC3B01A80165;
+			productRefGroup = F5C9136304C8CC3B01A80165;
+			projectDirPath = "";
+			targets = (
+				F5C9136104C8CC3B01A80165,
+				F5C9136A04C8CC3B01A80165,
+			);
+		};
+		F5CF20BB0699FC4401733BE5 = {
+			isa = PBXFileReference;
+			name = SerialPortIO.c;
+			path = Serial/SerialPortIO.c;
+			refType = 4;
+		};
+		F5CF20BC0699FC4401733BE5 = {
+			fileRef = F5CF20BB0699FC4401733BE5;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5CF20BD0699FC4401733BE5 = {
+			fileRef = F5CF20BB0699FC4401733BE5;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5CF20F8069A003F01733BE5 = {
+			isa = PBXFrameworkReference;
+			name = CoreFoundation.framework;
+			path = /System/Library/Frameworks/CoreFoundation.framework;
+			refType = 0;
+		};
+		F5CF23DF069A004001733BE5 = {
+			fileRef = F5CF20F8069A003F01733BE5;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5CF23E0069A004001733BE5 = {
+			fileRef = F5CF20F8069A003F01733BE5;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5CF23E1069A006201733BE5 = {
+			isa = PBXFrameworkReference;
+			name = IOKit.framework;
+			path = /System/Library/Frameworks/IOKit.framework;
+			refType = 0;
+		};
+		F5CF267D069A006301733BE5 = {
+			fileRef = F5CF23E1069A006201733BE5;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5CF267E069A006301733BE5 = {
+			fileRef = F5CF23E1069A006201733BE5;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5DE9C8604C9D2F901A80165 = {
+			isa = PBXFrameworkReference;
+			name = Carbon.framework;
+			path = /System/Library/Frameworks/Carbon.framework;
+			refType = 0;
+		};
+		F5DE9D1E04C9D2F901A80165 = {
+			fileRef = F5DE9C8604C9D2F901A80165;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5DE9D1F04C9D2F901A80165 = {
+			fileRef = F5DE9C8604C9D2F901A80165;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5DE9D2004C9D35201A80165 = {
+			isa = PBXFrameworkReference;
+			name = QuickTime.framework;
+			path = /System/Library/Frameworks/QuickTime.framework;
+			refType = 0;
+		};
+		F5DE9D4304C9D35301A80165 = {
+			fileRef = F5DE9D2004C9D35201A80165;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5DE9D4404C9D35301A80165 = {
+			fileRef = F5DE9D2004C9D35201A80165;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5DE9D5F04C9D3A401A80165 = {
+			children = (
+				F5DE9C8604C9D2F901A80165,
+				F5DE9D9604C9D48F01A80165,
+				F5DE9D2004C9D35201A80165,
+				F5CF20F8069A003F01733BE5,
+				F5CF23E1069A006201733BE5,
+			);
+			isa = PBXGroup;
+			name = Frameworks;
+			refType = 4;
+		};
+		F5DE9D9604C9D48F01A80165 = {
+			isa = PBXFileReference;
+			name = "libstdc++.a";
+			path = "/usr/lib/gcc/darwin/3.1/libstdc++.a";
+			refType = 0;
+		};
+		F5DE9D9704C9D48F01A80165 = {
+			fileRef = F5DE9D9604C9D48F01A80165;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5DE9E1E04C9DAF001A80165 = {
+			children = (
+				F5DE9E1F04C9DAF001A80165,
+			);
+			isa = PBXVariantGroup;
+			name = InfoPlist.strings;
+			path = "";
+			refType = 4;
+		};
+		F5DE9E1F04C9DAF001A80165 = {
+			isa = PBXFileReference;
+			name = English;
+			path = English.lproj/InfoPlist.strings;
+			refType = 4;
+		};
+		F5E0DF6604C9E7A901A80165 = {
+			fileRef = F5DE9D9604C9D48F01A80165;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5E0E03D04C9FED601A80165 = {
+			fileRef = F5DE9E1E04C9DAF001A80165;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5E0E03E04C9FF6701A80165 = {
+			fileRef = F5DE9E1E04C9DAF001A80165;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+	};
+	rootObject = F5C9138904C8CC3B01A80165;
+}

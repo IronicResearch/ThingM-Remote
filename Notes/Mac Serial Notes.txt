@@ -1,0 +1,21 @@
+Notes on ThingM Serial Interface Control on Macintosh Systems
+
+Macintosh Serial Interface Background
+-------------------------------------
+The early Macs came equipped with 2 built-in serial ports, one designated for Modem use and the other designated for Printer use. Although the serial ports were identical, ThingM is normally connected to the Modem port since network printing services were reserved only for Printer port devices. However the ThingM control is not itself a modem device; it simply connects to the serial port like one. Typically you would need a Mac serial adapter cable with a mini-DIN8 connector at the Mac end and a D25 modem-type connector at the other end for interfacing with ThingM's D25 adapter cable. 
+
+More recent Macs since the blue-and-white G3 models come equipped with USB ports instead to support a wider variety of modern peripheral devices. In order to support the earlier serial port devices, manufacturers like Keyspan offer PCI serial port boards and USB serial port adapters. Therefore you would need one of these add-on devices for connecting to ThingM using the same type of Mac serial adapter cable. In the Keyspan USB case, you would have a total of 3 adapters: one for USB-to-serial port, one for miniDIN8-to-D25 conversion, and finally one for D25-to-ThingM circular connector.
+
+The latest Macs also come installed with Mac OS X system software, which is completely different than its predecessors including device IO services. Therefore separate serial interface software is necessary to run on OS X versus OS 9 or earlier. Note that if you were to launch earlier Mac serial applications in the OS X Classic environment, the original Mac serial device services would be missing. This distinction is applicable even to the Keyspan USB serial drivers. In OS 9 the serial ports are seen by their conventional Modem and Printer names, but in OS X the ports can only be seen by their USB names.
+
+Software Configuration Gotchas
+------------------------------
+For Macs with built-in serial ports (all models before G3 and original beige G3 models only), use the mini-DIN8 adapter on the Modem port. No software drivers are required for using the Modem port, but beware of extra software and drivers installed for actual modem applications, like internet dialers. If an external modem is used, simply disconnect it when using ThingM. If an internal modem is used, you may need to temporarily disable the modem extensions in order to use the Modem port with ThingM.
+
+For Macs without built-in serial ports (all models after beige G3), use a PCI serial port board or USB serial port adapter. On Mac OS 9 or earlier, configure the serial port control panel to use the original Mac serial port names, including "Modem". Check for any options which may allow the "Modem" port to be available in addition to an internal modem device which may be present. Note that you want to use the "Modem" port, not an actual modem device. On Mac OS X, install and run any serial port utility which may be included, such as with the Keyspan USB adaptor. Check for the presence of the serial ports and the names being used, and then match that information with the results of the ThingM test app, SerialTerm. 
+
+Contact Info
+------------
+Ironic Research Labs
+www.ironicresearch.com
+info@ironicresearch.com

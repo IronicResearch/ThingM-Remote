@@ -1,0 +1,34 @@
+* ThingM Sequencer Script for Macintosh *
+
+* set the camera and projector total counters
+CAM    CTR          0
+PRJ    CTR       2000
+
+* insure sequencer and sync are off
+SEQ    OFF
+SYN    OFF
+
+* run the camera for 10 frames
+CAM    DIR       FOR
+CAM    FRM        10
+
+* run the projector for 5 frames
+PRJ    DIR       FOR
+PRJ    FRM         5
+
+* run alternate 1:1 sequence to projector frame 2010
+SEQ    ALT          1         1
+PRJ    OUT       2010
+
+* run the camera only for 5 more frames
+SEQ    OFF
+CAM    FRM         5
+
+* run the camera and projector in sync for 5 more frames
+CAM    SYN    	  ON
+CAM    FRM         5
+
+* run the projector in reverse for 5 frames
+SYN    OFF
+PRJ    DIR       REV
+PRJ    FRM         5

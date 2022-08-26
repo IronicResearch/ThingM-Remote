@@ -1,0 +1,97 @@
+#
+#	File:		ChangeLog
+#
+#	Contains:	
+#
+#	Version:	GX 1.2 or later
+#
+#	Copyright:	© 1996-1997 by Apple Computer, Inc., all rights reserved.
+#
+#	File Ownership:
+#
+#		DRI:				Tom Dowdy
+#
+#		Other Contact:		Jim Negrette
+#
+#		Technology:			Macintosh Graphics Group
+#
+#	Writers:
+#
+#		(ted)	Tom Dowdy
+#
+#	Change History (most recent first):
+#
+#		 <2>	 7/29/97	ted		Added appearance
+#		 <8>	 7/18/96	ted		fixing menu nil dereference
+#
+1.5d1
+7/29/97	ted	 - added appearance dialog stuff
+7/29/97	ted	 - added proper 'rapp' support
+
+1.4
+d13
+---
+7/18/96 ted - fixed bug relating to disabling of menus during print
+
+d12
+---
+7/10/96 ted - native/FAT version now
+			- fixed some bugs having to do with menu adjusting
+			  and hilighting.
+			- AppleGuide 2.x support
+d8
+--
+02/09/96 ted - converted to D11 headers, new SC compiler
+11/30/95 ted - open 'ttro' documents read only even first time
+
+d8
+--
+10/30/95 ted - support for high res PICTs displaying correctly sized
+10/24/95 ted - optimized scrolling of PICTs in ttro files
+
+d7
+--
+10/10/95 ted - form feed support for text doc printing
+10/01/95 ted - fixed text rotation hilight in PDDs
+
+d6
+--
+09/15/95 ted - annotation in PDDs first implementation
+09/15/95 Gr	 - support for new "Contents" menu
+08/18/95 ted - implemented movable modal dialog boxes
+08/15/95 ted - select all turns into select none
+08/15/95 ted - implementing PDD find autoscroll
+
+d5
+--
+08/14/95 ted - find now working for PDDs, minus wrap and autoscroll
+07/31/95 ted - fixed 1272735, page down key wrapping
+07/24/95 ted - started find dialog work for PDDs
+
+d4
+--
+07/21/95 ted - PICT files now support drag out
+07/21/95 ted - PDDs support Copy, drag out
+07/20/95 ted - PDDs now support selection, fixed some bugs in zooming
+
+d3
+--
+07/17/95 ted - text documents now have undo, fixed a minor bug in find
+
+d2
+--
+07/17/95 ted - PDDs now have better page browsing, proxy support, and zooming.
+
+d1
+--
+06/27/95 ted - now always respect stationary bit (112137)
+06/26/95 ted - UpdateResFile() on save of text doc (1246237)
+06/26/95 ted - increased RAM for new document to 64k (1249917)
+06/22/95 ted - added find/replace for text documents
+06/19/95 ted - added GX style font menu
+06/16/95 ted - added support for next page/prev page for text windows
+06/16/95 ted - added support for all 3d button types
+06/15/95 ted - disabled drag and drop for 3d views, as we don't allow edit
+
+1.3
+??/??/?? ted - added 3d viewer support
