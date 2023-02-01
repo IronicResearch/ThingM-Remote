@@ -28,3 +28,25 @@ To install XCode command line tools from a Terminal session, use `xcode-select -
 To compile with XCode command line tools, use `xcodebuild` with the project files. 
 For 64-bit Intel MacBook Pro running OS X 10.13 High Sierra, `xcodebuild -arch x86_64 -sdk macosx10.13`.
 
+#### MacSeq
+MacSeq is a legacy sequencer app for the JK optical printer.
+
+Based on the SimpleText SDK example for loading and editing simple text documents.
+Modified to parse text for 3-letter ThingM script commands for dispatching to a remotely connected ThingM controller.
+
+#### QTSeq
+QTSeq is another legacy sequencer app for the JK optical printer for use with a digital camera.
+
+Based on the QuickTime Digitizer SDK example 'HackTV', modified for single frame operation
+with a JK projector triggered via serial interface.
+
+Buildable as a legacy XCode project via `xcodebuild` on PowerMac G4 running OS X 10.4.
+Yields universal PPC/x86 binary for running on PowerMac G4 / OS X 10.4 and Intel MacBook / OS X 10.6.
+
+#### Serial
+Serial directory contains serial interface test apps, buildable on gcc command line via `make` utility.
+
+`SerialTerm` runs an interactive terminal session with the remotely connected ThingM controller using ASCII character commands.
+
+`SerialScript <script>` parses a text script file with 3-letter ThingM commands for dispatching to the remotely connected ThingM controller.
+
