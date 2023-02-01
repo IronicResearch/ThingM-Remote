@@ -54,6 +54,9 @@
 	Revision 1.2  	Original	GW
 */
 
+// Demo version always keeps frame markers 
+#define DEMO_VERSION	1
+
 //-----------------------------------------------------------------------
 // Includes
 
@@ -616,10 +619,17 @@ void CreateMonitorWindow(void)
 	}
 	Enable ((Handle) gRunMenu, kProjectorItem, true );
 	Enable ((Handle) gRunMenu, kSequencerItem, true );
+#ifdef DEMO_VERSION
+	Enable ((Handle) gRunMenu, kSlateMarkerItem, false);
+ 	CheckMenuItem (gRunMenu, kSlateMarkerItem, true);
+	Enable ((Handle) gRunMenu, kFrameMarkerItem, false);
+ 	CheckMenuItem (gRunMenu, kFrameMarkerItem, true);
+#else	
 	Enable ((Handle) gRunMenu, kSlateMarkerItem, true );
  	CheckMenuItem (gRunMenu, kSlateMarkerItem, gSlateMarkers ? true : false);
 	Enable ((Handle) gRunMenu, kFrameMarkerItem, true );
  	CheckMenuItem (gRunMenu, kFrameMarkerItem, gFrameMarkers ? true : false);
+#endif	
 	Enable ((Handle) gRunMenu, kProjectorTimingItem, true );
 	Enable ((Handle) gRunMenu, kSerialItem, true );
 	Enable ((Handle) gRunMenu, kVideoDetectItem, true );
@@ -845,16 +855,18 @@ static void Enable (Handle menu, short item, Boolean ok)
 					DoSequencerDialog();
 					break;
                                         
-                                case kSlateMarkerItem:
-                                        gSlateMarkers = (gSlateMarkers) ? false : true;
-                                        AdjustMenus();
-                                        break;
-                                        
-                                case kFrameMarkerItem:
-                                        gFrameMarkers = (gFrameMarkers) ? false : true;
-                                        AdjustMenus();
-                                        break;
-                                        
+#ifndef DEMO_VERSION
+				case kSlateMarkerItem:
+						gSlateMarkers = (gSlateMarkers) ? false : true;
+						AdjustMenus();
+						break;
+						
+				case kFrameMarkerItem:
+						gFrameMarkers = (gFrameMarkers) ? false : true;
+						AdjustMenus();
+						break;
+#endif
+						
 				case kSerialItem:
 					DoSerialDialog();
                                         AdjustMenus();
