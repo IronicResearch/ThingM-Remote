@@ -1,0 +1,401 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXApplicationTarget section */
+		20286C34FDCF999611CA2CEA /* QTSeq */ = {
+			isa = PBXApplicationTarget;
+			buildConfigurationList = 044EED9C0B9764FA006D8359 /* Build configuration list for PBXApplicationTarget "QTSeq" */;
+			buildPhases = (
+				20286C35FDCF999611CA2CEA /* Headers */,
+				20286C36FDCF999611CA2CEA /* Resources */,
+				20286C38FDCF999611CA2CEA /* Sources */,
+				20286C3BFDCF999611CA2CEA /* Frameworks */,
+				04313892FE3035C9C02AAC07 /* Rez */,
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = /usr/lib/gcc/darwin/3.1;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = QTSeq;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = QTSeq;
+			productName = "¬´PROJECTNAME¬ª";
+			productReference = 0249A665FF388DC511CA2CEA /* QTSeq.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>QTSeq</string>
+	<key>CFBundleGetInfoString</key>
+	<string>10.0 Ironic Research Labs</string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>QTSeq</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>10.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>10.0</string>
+	<key>CSResourcesFileMapped</key>
+	<true/>
+</dict>
+</plist>
+";
+		};
+/* End PBXApplicationTarget section */
+
+/* Begin PBXBuildFile section */
+		20286C3CFDCF999611CA2CEA /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20286C33FDCF999611CA2CEA /* Carbon.framework */; };
+		F5C90DC104C8CA2501A80165 /* Common.c in Sources */ = {isa = PBXBuildFile; fileRef = F5C90DBD04C8CA2501A80165 /* Common.c */; };
+		F5C90DC304C8CA2501A80165 /* Globals.c in Sources */ = {isa = PBXBuildFile; fileRef = F5C90DBF04C8CA2501A80165 /* Globals.c */; };
+		F5C90DC604C8CA6301A80165 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F5C90DC504C8CA6301A80165 /* main.c */; };
+		F5C910B704C8CACA01A80165 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C90DCD04C8CAC901A80165 /* CoreFoundation.framework */; };
+		F5C9135704C8CAE901A80165 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C910B804C8CAE801A80165 /* IOKit.framework */; };
+		F5E0DF8E04C9EC6901A80165 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5E0DF6E04C9EC6801A80165 /* QuickTime.framework */; };
+		F5E0E02804C9F93901A80165 /* QTSeq.r in Rez */ = {isa = PBXBuildFile; fileRef = F5C90DC904C8CA8301A80165 /* QTSeq.r */; };
+		F5E0E05404CA007E01A80165 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */; };
+		F5E0E05604CA030701A80165 /* SerialPortIO.c in Sources */ = {isa = PBXBuildFile; fileRef = F5E0E05504CA030701A80165 /* SerialPortIO.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		05952DFCFFF02D1B11CA0E50 /* Development */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OPTIMIZATION_CFLAGS = "-O0";
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		05952DFDFFF02D1B11CA0E50 /* Deployment */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		0249A665FF388DC511CA2CEA /* QTSeq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = QTSeq.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0249A669FF388E3911CA2CEA /* libstdc++.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "libstdc++.a"; path = "/usr/lib/libstdc++.a"; sourceTree = "<absolute>"; };
+		0640BAA4FFF0323A11CA0E50 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		0640BAA5FFF0323A11CA0E50 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		0867D6ABFE840B52C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		20286C33FDCF999611CA2CEA /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		F5C90DBD04C8CA2501A80165 /* Common.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = Common.c; path = Common/Common.c; sourceTree = SOURCE_ROOT; };
+		F5C90DBE04C8CA2501A80165 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Common.h; path = Common/Common.h; sourceTree = SOURCE_ROOT; };
+		F5C90DBF04C8CA2501A80165 /* Globals.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = Globals.c; path = Common/Globals.c; sourceTree = SOURCE_ROOT; };
+		F5C90DC004C8CA2501A80165 /* Globals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Globals.h; path = Common/Globals.h; sourceTree = SOURCE_ROOT; };
+		F5C90DC504C8CA6301A80165 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = main.c; path = Mac/main.c; sourceTree = SOURCE_ROOT; };
+		F5C90DC704C8CA8301A80165 /* carb.r */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; name = carb.r; path = Mac/carb.r; sourceTree = SOURCE_ROOT; };
+		F5C90DC804C8CA8301A80165 /* plst.r */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; name = plst.r; path = Mac/plst.r; sourceTree = SOURCE_ROOT; };
+		F5C90DC904C8CA8301A80165 /* QTSeq.r */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; name = QTSeq.r; path = Mac/QTSeq.r; sourceTree = SOURCE_ROOT; };
+		F5C90DCD04C8CAC901A80165 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		F5C910B804C8CAE801A80165 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		F5E0DF6E04C9EC6801A80165 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
+		F5E0E01404C9F12901A80165 /* carbonprefix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = carbonprefix.h; sourceTree = "<group>"; };
+		F5E0E05204CA006E01A80165 /* SerialPortSample.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = SerialPortSample.c; path = Serial/SerialPortSample.c; sourceTree = "<group>"; };
+		F5E0E05504CA030701A80165 /* SerialPortIO.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = SerialPortIO.c; path = Serial/SerialPortIO.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20286C3BFDCF999611CA2CEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20286C3CFDCF999611CA2CEA /* Carbon.framework in Frameworks */,
+				F5C910B704C8CACA01A80165 /* CoreFoundation.framework in Frameworks */,
+				F5C9135704C8CAE901A80165 /* IOKit.framework in Frameworks */,
+				F5E0DF8E04C9EC6901A80165 /* QuickTime.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		195DF8C9FE9D4F0611CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0249A665FF388DC511CA2CEA /* QTSeq.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20286C29FDCF999611CA2CEA /* ¬´PROJECTNAME¬ª */ = {
+			isa = PBXGroup;
+			children = (
+				20286C2AFDCF999611CA2CEA /* Sources */,
+				20286C2CFDCF999611CA2CEA /* Resources */,
+				20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */,
+				195DF8C9FE9D4F0611CA2CBB /* Products */,
+			);
+			name = "¬´PROJECTNAME¬ª";
+			sourceTree = "<group>";
+		};
+		20286C2AFDCF999611CA2CEA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F5E0E01404C9F12901A80165 /* carbonprefix.h */,
+				F5C90DC004C8CA2501A80165 /* Globals.h */,
+				F5C90DBF04C8CA2501A80165 /* Globals.c */,
+				F5C90DBE04C8CA2501A80165 /* Common.h */,
+				F5C90DBD04C8CA2501A80165 /* Common.c */,
+				F5C90DC504C8CA6301A80165 /* main.c */,
+				F5E0E05204CA006E01A80165 /* SerialPortSample.c */,
+				F5E0E05504CA030701A80165 /* SerialPortIO.c */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		20286C2CFDCF999611CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */,
+				F5C90DC704C8CA8301A80165 /* carb.r */,
+				F5C90DC804C8CA8301A80165 /* plst.r */,
+				F5C90DC904C8CA8301A80165 /* QTSeq.r */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		20286C32FDCF999611CA2CEA /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				20286C33FDCF999611CA2CEA /* Carbon.framework */,
+				0249A669FF388E3911CA2CEA /* libstdc++.a */,
+				0640BAA4FFF0323A11CA0E50 /* ApplicationServices.framework */,
+				0640BAA5FFF0323A11CA0E50 /* CoreServices.framework */,
+				F5C90DCD04C8CAC901A80165 /* CoreFoundation.framework */,
+				F5C910B804C8CAE801A80165 /* IOKit.framework */,
+				F5E0DF6E04C9EC6801A80165 /* QuickTime.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		20286C35FDCF999611CA2CEA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXProject section */
+		20286C28FDCF999611CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 044EEDA00B9764FA006D8359 /* Build configuration list for PBXProject "QTSeqUniversal" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				05952DFCFFF02D1B11CA0E50 /* Development */,
+				05952DFDFFF02D1B11CA0E50 /* Deployment */,
+			);
+			hasScannedForEncodings = 0;
+			mainGroup = 20286C29FDCF999611CA2CEA /* ¬´PROJECTNAME¬ª */;
+			projectDirPath = "";
+			targets = (
+				20286C34FDCF999611CA2CEA /* QTSeq */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		20286C36FDCF999611CA2CEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5E0E05404CA007E01A80165 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		04313892FE3035C9C02AAC07 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5E0E02804C9F93901A80165 /* QTSeq.r in Rez */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20286C38FDCF999611CA2CEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5C90DC104C8CA2501A80165 /* Common.c in Sources */,
+				F5C90DC304C8CA2501A80165 /* Globals.c in Sources */,
+				F5C90DC604C8CA6301A80165 /* main.c in Sources */,
+				F5E0E05604CA030701A80165 /* SerialPortIO.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0867D6AAFE840B52C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0867D6ABFE840B52C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		044EED9D0B9764FA006D8359 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = /usr/lib/gcc/darwin/3.1;
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = QTSeq;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		044EED9E0B9764FA006D8359 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = /usr/lib/gcc/darwin/3.1;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = QTSeq;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		044EED9F0B9764FA006D8359 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = /usr/lib/gcc/darwin/3.1;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = QTSeq;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		044EEDA10B9764FA006D8359 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		044EEDA20B9764FA006D8359 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		044EEDA30B9764FA006D8359 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		044EED9C0B9764FA006D8359 /* Build configuration list for PBXApplicationTarget "QTSeq" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				044EED9D0B9764FA006D8359 /* Development */,
+				044EED9E0B9764FA006D8359 /* Deployment */,
+				044EED9F0B9764FA006D8359 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		044EEDA00B9764FA006D8359 /* Build configuration list for PBXProject "QTSeqUniversal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				044EEDA10B9764FA006D8359 /* Development */,
+				044EEDA20B9764FA006D8359 /* Deployment */,
+				044EEDA30B9764FA006D8359 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20286C28FDCF999611CA2CEA /* Project object */;
+}
